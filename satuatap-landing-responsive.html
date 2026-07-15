@@ -75,6 +75,26 @@
     font-size: clamp(11px, 1.3vw, 14px); letter-spacing: 2px; color: var(--cream);
   }
 
+  /* Hero layout with image */
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1fr 440px;
+    gap: 32px;
+    align-items: center;
+    margin-top: 18px;
+  }
+  .hero-left { }
+  .hero-image {
+    border-radius: 14px; overflow: hidden; box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+    background: #ddd;
+  }
+  .hero-image img { width: 100%; height: 100%; display: block; object-fit: cover; min-height: 260px; }
+
+  @media (max-width: 880px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-image { order: -1; margin-bottom: 18px; }
+  }
+
   /* ---------- PROBLEM ---------- */
   .grid2 {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -228,10 +248,17 @@
 <!-- HERO -->
 <section class="hero">
   <div class="wrap">
-    <div class="kicker">Company Profile &amp; Pitch Deck 2026</div>
-    <h1>Membangun Rumah,<br>Menjaga <span class="accent">Kepercayaan.</span></h1>
-    <p class="sub">Mitra kontraktor perumahan end-to-end untuk keluarga dan pengembang di Kalimantan Selatan — dari desain, RAB transparan, hingga serah terima tepat waktu.</p>
-    <div class="tagpill">BANJARBARU · BANJARMASIN · KALIMANTAN SELATAN</div>
+    <div class="kicker">Company Profile</div>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <h1>Membangun Rumah,<br>Menjaga <span class="accent">Kepercayaan.</span></h1>
+        <p class="sub">Mitra kontraktor perumahan end-to-end untuk keluarga dan pengembang di Kalimantan Selatan — dari desain, RAB transparan, hingga serah terima tepat waktu.</p>
+        <div class="tagpill">BANJARBARU · KALIMANTAN SELATAN</div>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80" alt="Foto perumahan modern — contoh proyek perumahan" />
+      </div>
+    </div>
   </div>
 </section>
 
@@ -466,12 +493,12 @@
     <h2>Siap Wujudkan Proyek Anda</h2>
     <div class="closing-grid">
       <div class="team-col">
-        <div class="team-member"><div class="avatar">FA</div><div><h4>Fauzan Ahmad</h4><p>Direktur &amp; Pendiri</p></div></div>
+        <div class="team-member"><div class="avatar">FA</div><div><h4>Ahmad</h4><p>Direktur &amp; Pendiri</p></div></div>
         <div class="team-member"><div class="avatar">RS</div><div><h4>Rahmat Setiawan</h4><p>Kepala Proyek</p></div></div>
         <div class="team-member"><div class="avatar">NW</div><div><h4>Nadia Wulandari</h4><p>Arsitek &amp; Desainer</p></div></div>
       </div>
       <div class="contact-col">
-        <div class="contact-row"><div class="dot"></div> +62 812-3456-7890</div>
+        <div class="contact-row"><div class="dot"></div> +62 8xx-xxxx-xxxx</div>
         <div class="contact-row"><div class="dot"></div> halo@satuatapkonstruksi.id</div>
         <div class="contact-row"><div class="dot"></div> @satuatap.konstruksi</div>
         <div class="contact-row"><div class="dot"></div> Jl. A. Yani Km. 22, Banjarbaru, Kalimantan Selatan</div>
@@ -479,7 +506,7 @@
     </div>
     <div class="cta-box">
       <h3>Mari diskusikan kebutuhan pembangunan rumah Anda.</h3>
-      <a class="btn" href="mailto:halo@satuatapkonstruksi.id">Jadwalkan Konsultasi →</a>
+      <a class="btn" >Jadwalkan Konsultasi →</a>
     </div>
     <div class="foot-note">© 2026 SATU ATAP KONSTRUKSI — Perusahaan fiktif untuk keperluan portofolio</div>
   </div>
